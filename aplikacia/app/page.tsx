@@ -1,17 +1,25 @@
-// "use client";
+import { client } from "@/lib/sanity"
 
-export default function Home() {
+export default async function Home() {
+  const movies = await client.fetch(`*[_type == "movie"]`)
 
-  // const handleClick = () => {
-    console.log("PROJECT_ID:", process.env.NEXT_PUBLIC_SANITY_PROJECT_ID);
-    console.log("DATASET:", process.env.NEXT_PUBLIC_SANITY_DATASET);
-    console.log("TAJNE:", process.env.TAJNE);
-    console.log("PUBLIC TAJNE:", process.env.NEXT_PUBLIC_TAJNE);
-  // };
+  console.log("MOVIES:", movies)
 
   return (
-    <button >
-      Logni env
-    </button>
-  );
+    <>
+      <div className="h-[700px] bg-amber-600 w-full flex pt-[72px]">
+        <div className="flex-1 bg-amber-900"></div>
+      {/* {movies?.map((item) => (
+        <h2 key={item._id}>{item.title}</h2>
+      ))} */}
+    </div>
+      <div className="h-[800px] bg-amber-600 w-full">
+      {/* {movies?.map((item) => (
+        <h2 key={item._id}>{item.title}</h2>
+      ))} */}
+    </div>
+    
+    </>
+  
+  )
 }
