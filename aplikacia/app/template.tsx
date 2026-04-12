@@ -15,11 +15,11 @@ export default function Template({
     <AnimatePresence mode="wait">
       <motion.div
         key={pathname}
-        initial={{ opacity: 0, y: 10 }}
+        initial={{ opacity: 1, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.3 }}
-        className="flex gap-1 flex-col pl-3 pr-3"
+        className="flex gap-[10px] flex-col px-[var(--mobilKraj)] md:px-[var(--pcokrej)]"
       >
         {children}
       </motion.div>

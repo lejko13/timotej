@@ -28,6 +28,8 @@ useEffect(() => {
     document.removeEventListener("mousedown", klik);
   };
 }, []);
+
+
 useEffect(() => {
 
   console.log(referencia);
@@ -41,7 +43,7 @@ useEffect(() => {
    initial={{ height: 64 }}
   animate={{ height: otvaram ? "fit-content"  : 64}}
 
-    className="px-3 pt-3 pb-3 flex items-center  flex-col fixed top-0 left-0 w-full h-16 gap-[12px] bg-red-500 text-white overflow-hidden">
+    className="px-[var(--mobilKraj)] md:px-[var(--pcokrej)] pt-3 pb-3 flex items-center  flex-col fixed top-0 left-0 w-full h-16 gap-[12px] bg-red-500 text-white overflow-hidden">
     
         <div className='
         flex justify-between items-center
