@@ -232,8 +232,7 @@ gap-[12px] bg-red-500 text-white overflow-hidden">
                  className='w-fit h-[40px] bg-amber-800'>
                   <Buttonheader
         pohyb = {otvaram}
-        onClick = {() => {setOtvram(prev => !prev);setSkusam("")
-        }}
+        onClick = {() => {setOtvram(prev => !prev);setSkusam("")}}
         ></Buttonheader>
                   
                  </div>    
@@ -277,6 +276,7 @@ gap-[12px] bg-red-500 text-white overflow-hidden">
     </motion.div>
  {/* mobil */}
 
+{/* pc */}
 <motion.div
   initial={{ opacity: 0 }}
   animate={{
@@ -284,8 +284,22 @@ gap-[12px] bg-red-500 text-white overflow-hidden">
     pointerEvents: otovrenie ? "auto" : "none",
   }}
   transition={{ duration: 0.3 }}
-  className="fixed w-screen h-screen  bg-black/70 z-10"
+  className="hidden w-screen h-screen  bg-black/70 z-10 lg:block fixed"
 />
+{/* pc */}
+
+{/* mobil */}
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{
+    opacity: otvaram ? 1 : 0,
+    pointerEvents: otvaram ? "auto" : "none",
+  }}
+  transition={{ duration: 0.3 }}
+  className="fixed w-screen h-screen  bg-black/70 z-10 lg:hidden "
+/>
+{/* mobil */}
+
        </>
   );
 }

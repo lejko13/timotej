@@ -19,13 +19,13 @@ type Props = {
 export default function MySwiper({ items }: Props) {
   return (
     <Swiper
-      className="w-full h-full"
+      className="w-full h-full bg-black"
       modules={[Autoplay, EffectFade]}
       effect="fade"
       fadeEffect={{ crossFade: true }}
       speed={1000} // 👈 plynulosť prechodu
       autoplay={{
-        delay: 4000,
+        delay: 3000,
         disableOnInteraction: false,
       }}
       loop={true}

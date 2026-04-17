@@ -47,7 +47,7 @@ export default  function Uvod({data,data2,pozadiedata} : Props) {
 
 
 <div
-  className="w-full h-full absolute inset-x-0"
+  className="w-full h-[700px] md:h-screen absolute inset-x-0"
   style={{
     background:
       "linear-gradient(to bottom, transparent 0%, transparent 0%, transparent 10%, black 100%)",
