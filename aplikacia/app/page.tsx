@@ -25,7 +25,7 @@ export default async function Page() {
    
     </div>
 
-    <div  className="h-fit md:h-fit-content w-[full] bg-black flex px-4   md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
+    <div  className=" pt-17 h-fit md:h-fit-content w-[full] bg-black flex px-4   md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
  <Druhacst
    pozadiedata = {pozadiedata}
  ></Druhacst>

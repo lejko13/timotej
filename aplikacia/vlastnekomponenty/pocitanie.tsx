@@ -43,7 +43,7 @@ const Tusucisla = ({ text, maxx, specialZnak,index }: Props) => {
   return (
     <div
       ref={ref}
-      className="w-full h-fit flex flex-col gap-9 lg:gap-14 leading-none items-start pb-5"
+      className="w-full h-fit flex flex-col gap-9 lg:gap-12 leading-none items-start pb-5"
     >
         <div 
        
@@ -53,7 +53,7 @@ const Tusucisla = ({ text, maxx, specialZnak,index }: Props) => {
        >
 
       
-      <span className="text-[40px] md:text-[50px] lg:text-[70px] font-semibold">
+      <span className="text-[40px] md:text-[50px] lg:text-[70px] font-medium">
         {cislo}
         {specialZnak}
       </span>

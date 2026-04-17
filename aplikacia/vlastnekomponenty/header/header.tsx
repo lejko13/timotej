@@ -149,7 +149,7 @@ useEffect(() => {
      className=" 
      text-white 
      rounded-[var(--radius)]
-     bg-black/20
+     bg-black/10
      z-50 hidden top-5 left-[var(--pcokrej)] right-[var(--pcokrej)] lg:block   backdrop-blur-xl px-4 py-2  flex items-center  flex-col  fixed   ">
 <div className='h-[50px] flex  justify-between '>
 
@@ -226,7 +226,12 @@ block p-3 flex items-center flex-col fixed
 h-16 
 lg:flex-row
 lg:hidden
-gap-[12px] bg-red-500 text-white overflow-hidden">
+gap-[12px] backdrop-blur-xl text-white overflow-hidden
+rounded-[var(--radius)]
+     bg-black/10
+
+     text-[16px]
+">
     
         <div className='
         flex
@@ -237,7 +242,7 @@ gap-[12px] bg-red-500 text-white overflow-hidden">
 
                  <div 
                  ref = {referencia}
-                 className='w-fit h-[40px] bg-amber-800'>
+                 className='w-fit h-[40px] '>
                   <Buttonheader
         pohyb = {otvaram}
         onClick = {() => {setOtvram(prev => !prev);setSkusam("")}}
@@ -249,13 +254,13 @@ gap-[12px] bg-red-500 text-white overflow-hidden">
 
         <motion.div 
         ref={referencia2}
-        className='w-full h-fit bg-pink-500 gap-1 flex flex-col lg:hidden'>
+        className='w-full h-fit  flex flex-col lg:hidden '>
 
           {data.map((item) =>
           
           
-
-           <BtnOtvarac
+<>
+<BtnOtvarac
 
          
 
@@ -267,14 +272,19 @@ gap-[12px] bg-red-500 text-white overflow-hidden">
             ano={ skusam === item._id}
 
           referencia = {item.Referecnie}
+otvaram = {otvaram}
+          ></BtnOtvarac>
 
-          ></BtnOtvarac>)}
+   <div className="w-full h-[1px] bg-[var(--sivaSvetlsie)]"></div>
+</>
+           
+          )}
 
 
        
         
         </motion.div >
-              <div className=' h-12 w-full lg:hidden bg-amber-700'>btn</div>
+        <div className=' mt-6 mb-3 h-12 w-full lg:hidden bg-[var(--biela)] rounded-[var(--radiusInsie)] flex items-center justify-center text-[var(--cierna)]'>Kontaktovať</div>
 
            
 

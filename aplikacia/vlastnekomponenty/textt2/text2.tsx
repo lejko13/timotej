@@ -39,7 +39,7 @@ export default function ProjectsHeader({ goNext, goPrev }: Props) {
       
 
       <div className="flex flex-col items-start md:items-end gap-5 ">
-<p className="text-neutral-500 w-fit mx-auto md:mx-0 text-sm md:text-base leading-relaxed max-w-xs text-center md:text-left">
+<p className="text-neutral-500 hidden lg:block w-fit mx-auto md:mx-0 text-sm md:text-base leading-relaxed max-w-xs text-center md:text-left">
   A visual library of interiors brought to life from blueprint to beauty.
 </p>
      
