@@ -35,16 +35,17 @@ export function BtnKlasika({text,rednder} : Props) {
 
 
   return (
-    <button className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">
-
-<div className="flex justify-between">
-  <span className="whitespace-nowrap">{text}</span>
+    <button className=" h-full text-white flex justify-between flex-col  rounded-md  transition">
+ 
+<div className="flex h-full  text-[16px] items-center w-[80px]  gap-1 justify-center ">
+  <span className="whitespace-nowrap ">{text}</span>
 {rednder &&  
 <motion.div
+className=" text-[10px]  "
           animate={{ rotate: otovrenie ? 180 : 0 }}
         transition={{ duration: 0.3 }}
        
-        ><ChevronDown/>
+        ><ChevronDown size={20}/>
         </motion.div>
 }
  

@@ -7,7 +7,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  --font-sans: var(--font-figtree);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -52,6 +52,14 @@
   --mobilKraj:20px;
   --stred:40px;
   --pcokrej:70px;
+
+    --radius: 12px;
+    --radiusInsie: 8px;
+    --sivaTmava: #262626;
+    --cierna:black;
+    --biela:white;
+    --sivaSvetlsie: #525252;
+
 }
 body {
   scroll-behavior: smooth;

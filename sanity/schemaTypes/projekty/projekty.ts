@@ -16,6 +16,18 @@ export default defineType({
    {
      name:"Popis",
     type:"string"
+   },
+   {
+     name:"Rok",
+    type:"number"
+   },
+   {
+    name:"Typ",
+    type:"string"
+   },
+   {
+    name:"IDENTIFIKATOR",
+    type:"number"
    }
   ],
 });

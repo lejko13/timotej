@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Figtree } from "next/font/google";
 import "./globals.css";
 
 import { AppProvider } from "./providers";
@@ -8,14 +8,9 @@ import { AppProvider } from "./providers";
 
 
 import DATAheader from '../vlastnekomponenty/header/DATAheader'
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const figtree = Figtree({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-figtree",
 });
 
 export const metadata: Metadata = {
@@ -36,14 +31,15 @@ export default   function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${figtree.variable}  h-full antialiased`}
     >
          
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col font-[var(--font-figtree)]">
          <AppProvider>
           <DATAheader></DATAheader>
-         </AppProvider>
+      
         {children}
+           </AppProvider>
         </body>
 
       

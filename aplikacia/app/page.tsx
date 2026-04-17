@@ -3,7 +3,8 @@
 import Uvod from "./uvodRender/uvod";
 import Link from "next/link";
 import { client } from "@/lib/sanity";
-
+import Druhacst from '../vlastnekomponenty/druhacast/druhacast'
+import MalaCast from '../vlastnekomponenty/malacast/malacast'
 export default async function Page() {
   const data = await client.fetch(`*[_type == "zakladneInformacie"]`);
   const data2 = await client.fetch(`*[_type == "skusenosti"]`);
@@ -24,9 +25,19 @@ export default async function Page() {
    
     </div>
 
-    <div  className="h-[700px] md:h-screen w-[full] bg-black flex p-4 md:pt-5  md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
-      jbchsbvhbhjvb ah
+    <div  className="h-fit md:h-fit-content w-[full] bg-black flex px-4   md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
+ <Druhacst
+   pozadiedata = {pozadiedata}
+ ></Druhacst>
     </div>
+
+
+    <div className="h-[700px] md:h-screen w-[full] bg-white flex p-4 md:pt-5  md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
+<MalaCast></MalaCast>
+      
+    </div>
+    <div className="h-[700px] md:h-screen w-[full] bg-pink-400 flex p-4 md:pt-5  md:px-[var(--stred)] lg:px-[var(--pcokrej)]"></div>
+    <div className="h-[700px] md:h-screen w-[full] bg-white flex p-4 md:pt-5  md:px-[var(--stred)] lg:px-[var(--pcokrej)]"></div>
 
 
 

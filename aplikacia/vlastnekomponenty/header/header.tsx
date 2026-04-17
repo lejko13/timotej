@@ -46,9 +46,9 @@ export function Header({ data ,data2}: Props) {
 
   //  const isMobile = useMediaQuery({ mWidth: 768 });
 
-console.log(data2[0].LogoNazovWebu);
+// console.log(data2[0].LogoNazovWebu);
 
-  console.log(data);
+//   console.log(data);
   
 
   const [otvaram,setOtvram] = useState(false)
@@ -144,29 +144,33 @@ useEffect(() => {
     
     {/* pc */}
     <motion.div  
-      initial={{ height: 74 }}
+      initial={{ height: 66 }}
        animate={{ height: "fit-content"}}
-     className=" z-50 hidden top-5 left-[var(--pcokrej)] right-[var(--pcokrej)] lg:block  bg-amber-600 p-3 flex items-center  flex-col  fixed  h-16 ">
-<div className='h-[50px] bg-red-500  flex  justify-between '>
+     className=" 
+     text-white 
+     rounded-[var(--radius)]
+     bg-black/20
+     z-50 hidden top-5 left-[var(--pcokrej)] right-[var(--pcokrej)] lg:block   backdrop-blur-xl px-4 py-2  flex items-center  flex-col  fixed   ">
+<div className='h-[50px] flex  justify-between '>
 
 {/* <div className='w-fit bg-amber-200 h-full flex items-center justify-center'>{data2[0].LogoNazovWebu}</div> */}
-<div className='w-fit bg-amber-200 h-full flex items-center justify-center'>{data2[0].LogoNazovWebu}</div>
+<div className='w-fit h-full flex items-center justify-center font-medium text-[17px]'>{data2[0].LogoNazovWebu}</div>
 
 <div 
 // ref={sirka}
-className='w-fit bg-pink-200 h-full flex'>
+className='w-fit h-full flex gap-1 ' >
   {data.map((item,i) => 
   <div 
     ref={(el) => {
       if (item.isActive) {
         refs.current[i] = el;
-        console.log(item.Referecnie);
+        // console.log(item.Referecnie);
       
         setInformacia(item.Referecnie)
       }
 
     }}
-  className='p-1 h-full bg-amber-400'>
+  className=' h-full  items-center justify-center flex'>
   <BtnKlasika
  text={item.Nazov}
  rednder = {item.isActive}
@@ -183,8 +187,12 @@ className='w-fit bg-pink-200 h-full flex'>
         <motion.div 
         ref={referencia3}
         initial ={{ height: 0 }}
-        animate={{ height:  otovrenie ? "fit-content" : "0px" }}
-        className='w-full bg-pink-500 overflow-hidden flex gap-2'>
+        animate={{ 
+          height:  otovrenie ? "fit-content" : "0px",
+          paddingTop: otovrenie ? "7px" : "0px",
+          paddingBottom: otovrenie ? "15px" : "0px",
+         }}
+        className='w-full  overflow-hidden flex gap-6'>
        {informacia?.map((polozka) => {
   return   <KartaTyp
   NazovOdboru = {polozka.Nazov}
@@ -224,7 +232,7 @@ gap-[12px] bg-red-500 text-white overflow-hidden">
         flex
 
         flex justify-between items-center
-        w-full bg-amber-300 lg:hidden'>
+        w-full lg:hidden'>
                  <div>{data2[0].LogoNazovWebu}</div>
 
                  <div 

@@ -1,7 +1,9 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import type { Swiper as SwiperType } from "swiper";
 
+import { createContext, useContext, useState, useRef } from "react";
+import type { Dispatch, SetStateAction } from "react";
 type AppContextType = {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -10,7 +12,7 @@ type AppContextType = {
   otovrenie: boolean;
   setOtvorenie: React.Dispatch<React.SetStateAction<boolean>>;
 
-
+ swiperRef: React.MutableRefObject<SwiperType | null>;
 };
 
 const AppContext = createContext<AppContextType | null>(null);
@@ -26,9 +28,12 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [otovrenie, setOtvorenie] = useState(false);
 
 
+    const swiperRef = useRef<SwiperType | null>(null);
+
+
 
   return (
-    <AppContext.Provider value={{ open, setOpen,okno, setOkno,otovrenie, setOtvorenie}}>
+    <AppContext.Provider value={{ open, setOpen,okno, setOkno,otovrenie, setOtvorenie,swiperRef }}>
       {children}
     </AppContext.Provider>
   );

@@ -50,7 +50,7 @@ export default  function Uvod({data,data2,pozadiedata} : Props) {
   className="w-full h-[700px] md:h-screen absolute inset-x-0"
   style={{
     background:
-      "linear-gradient(to bottom, transparent 0%, transparent 0%, transparent 10%, black 100%)",
+      "linear-gradient(to bottom, black 0%, transparent 0%, transparent 10%, black 100%)",
   }}
 ></div>
 
@@ -74,7 +74,7 @@ export default  function Uvod({data,data2,pozadiedata} : Props) {
             <br />
             váš vysnívaný dom
           </h1> */}
-          <h1 className="max-w-[300px] bg-amber-500  text-4xl  md:text-6xl  md:max-w-[700px] lg:text-7xl text-foreground leading-[1.1] tracking-tight">
+          <h1 className="max-w-[300px]    text-4xl  md:text-6xl  md:max-w-[800px] lg:text-7xl  tracking-tight">
            {data[0].UvodnyText}
           </h1>
         </motion.div>
@@ -84,7 +84,7 @@ export default  function Uvod({data,data2,pozadiedata} : Props) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="
-          max-w-[300px]  text-lg  bg-amber-700 text-center text-foreground/60   md:max-w-xl mx-auto lg:text-xl "
+          max-w-[300px]  text-lg  text-center text-foreground/60   md:max-w-xl mx-auto lg:text-xl "
         >
          {data[0].NizzsieText}
         </motion.p>
