@@ -50,8 +50,8 @@
 
 :root {
   --mobilKraj:20px;
-
-  --pcokrej:45px;
+  --stred:40px;
+  --pcokrej:70px;
 }
 body {
   scroll-behavior: smooth;

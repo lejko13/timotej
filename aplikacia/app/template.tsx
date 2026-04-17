@@ -19,7 +19,7 @@ export default function Template({
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.3 }}
-        className="flex gap-[10px] flex-col px-[var(--mobilKraj)] md:px-[var(--pcokrej)]"
+        className="flex gap-[10px] flex-col "
       >
         {children}
       </motion.div>
