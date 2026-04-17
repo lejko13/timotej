@@ -39,7 +39,7 @@ export default async function Page() {
 
       
     </div>
-    <div className="h-[700px] md:h-screen w-[full] bg-red-300 flex p-4 md:pt-5 flex-col  md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
+    <div className="h-[700px] md:h-screen w-[full] bg-red-500 flex p-4 md:pt-5 flex-col  md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
       <MalaCast></MalaCast>
       <Otakza></Otakza>
       {/* <div className="w-full h-[900px] bg-pink-400"></div> */}
