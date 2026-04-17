@@ -37,7 +37,7 @@ export function BtnKlasika({text,rednder} : Props) {
   return (
     <button className=" h-full text-white flex justify-between flex-col  rounded-md  transition">
  
-<div className="flex h-full  text-[16px] items-center w-[80px]  gap-1 justify-center ">
+<div className="flex h-full  text-[16px] items-center   gap-1 justify-center ">
   <span className="whitespace-nowrap ">{text}</span>
 {rednder &&  
 <motion.div

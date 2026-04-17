@@ -7,10 +7,10 @@ export default function ProjectsHeader() {
   const { swiperRef } = useApp();
 
   return (
-    <div className="grid grid-cols-1 bg-amber-600 md:grid-cols-3 gap-2 md:gap-6 mb-12 md:mb-20 items-start">
+    <div className="grid grid-cols-1 bg-amber-600 md:grid-cols-3 gap-2 md:gap-6 mb-12 md:mb-20 items-start w-full">
       
       {/* Left */}
-      <div className="pt-1 flex justify-center md:justify-start">
+      <div className="pt-1 flex justify-center md:justify-start bg-amber-800">
         <div className="flex items-center gap-2.5 w-fit">
           <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-[pulse_2s_ease-in-out_infinite]" />
           
@@ -34,7 +34,7 @@ export default function ProjectsHeader() {
           A visual library of interiors brought to life from blueprint to beauty.
         </p>
 
-        <div className="flex gap-3">
+        <div className="flex gap-3 hidden">
           <button
             onClick={() => swiperRef.current?.slidePrev()}
             className="w-10 h-10 rounded-full border border-neutral-700 flex items-center justify-center text-neutral-400 hover:border-neutral-400 hover:text-white transition-all duration-300"

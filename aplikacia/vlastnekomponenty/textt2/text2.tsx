@@ -15,7 +15,7 @@ export default function ProjectsHeader({ goNext, goPrev }: Props) {
   const { swiperRef } = useApp();
 
   return (
-    <div className=" gap-2 pt-1  grid grid-cols-1 md:grid-cols-3 md:gap-6 mb-12 md:mb-20 items-start">
+    <div className=" gap-2 pt-1   grid grid-cols-1 md:grid-cols-3 md:gap-6 mb-3 md:mb-20 items-start">
 
         <div className="pt-1  flex justify-center md:justify-start">
               <div className="flex items-center gap-2.5  w-fit ">
@@ -45,7 +45,7 @@ export default function ProjectsHeader({ goNext, goPrev }: Props) {
      
        
 
-        <div className="flex gap-3">
+        <div className="flex gap-3 hidden md:flex items-end justify-end  w-full   ">
           <button
  onClick={() => swiperRef.current?.slidePrev()}
             className="w-10 h-10 rounded-full border border-neutral-700 flex items-center justify-center text-neutral-400 hover:border-neutral-400 hover:text-white transition-all duration-300"

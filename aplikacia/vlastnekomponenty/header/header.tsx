@@ -158,7 +158,7 @@ useEffect(() => {
 
 <div 
 // ref={sirka}
-className='w-fit h-full flex gap-1 ' >
+className='w-fit h-full flex gap-4 items-center ' >
   {data.map((item,i) => 
   <div 
     ref={(el) => {
@@ -177,6 +177,8 @@ className='w-fit h-full flex gap-1 ' >
   ></BtnKlasika>
   </div>
   )}
+<div className=' h-10 w-full  px-4 bg-[var(--biela)] rounded-[var(--radiusInsie)] flex items-center justify-center text-[var(--cierna)]'>Kontaktovať</div>
+  
   
 </div>
 
@@ -206,6 +208,8 @@ className='w-fit h-full flex gap-1 ' >
 })}
 
 
+
+
         </motion.div>
      </motion.div>
 
@@ -222,7 +226,7 @@ className='w-fit h-full flex gap-1 ' >
 top-4 left-4 right-4 
 md:top-5 md:right-[var(--pcokrej)] md:left-[var(--pcokrej)]
 md:top-5 md:right-[var(--stred)] md:left-[var(--stred)]
-block p-3 flex items-center flex-col fixed 
+block px-4 py-3 flex items-center flex-col fixed 
 h-16 
 lg:flex-row
 lg:hidden

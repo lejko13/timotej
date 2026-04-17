@@ -10,6 +10,7 @@ import Tusucisla from '../../vlastnekomponenty/pocitanie'
 import { SanityImage } from '../../lib/types/sanity'
 import MySwiper from '../../vlastnekomponenty/posunobrazok'
 
+
 type Ukazka = {
   cislo: number;
   popis: string;

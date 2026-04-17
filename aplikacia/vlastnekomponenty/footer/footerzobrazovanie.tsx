@@ -2,7 +2,7 @@ import { Header } from '../header/header'
 import { client } from "@/lib/sanity"
 import { Suspense } from "react"
 
-async function HeaderData() {
+async function Footer() {
   const header = await client.fetch(`
     *[_type == "Header"]{
       ...,
@@ -25,7 +25,7 @@ async function HeaderData() {
 export default function DATAheader() {
   return (
     <Suspense>
-      <HeaderData />
+      {/* <HeaderData /> */}
     </Suspense>
   )
 }

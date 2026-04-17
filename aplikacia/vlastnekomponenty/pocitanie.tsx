@@ -47,7 +47,7 @@ const Tusucisla = ({ text, maxx, specialZnak,index }: Props) => {
     >
         <div 
        
-       className = {"border-b-1 w-full"
+       className = {"border-b-1 w-full pb-3"
 
        }
        >
