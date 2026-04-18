@@ -12,7 +12,10 @@ import header from './header'
 import typSluzby from './schemy/typSluzby'
 import skusenotsi from './skusenosti'
 import Projekty from './projekty/projekty'
-
+import ProjetkyUVODNA from './projektymaintext/projektymaintext'
+import SluzbyUvodna from './sluzbaUvod/sluzbaUvod'
+import Otazky from './otazky'
+import otazkycast from './otazkovacast'
 
 
 export const schemaTypes = [
@@ -21,11 +24,15 @@ export const schemaTypes = [
   person,
   screening,
   header,
+  Otazky,
+otazkycast,
   zakladneinformacie,
  
   typSluzby,
   skusenotsi,
   Projekty,
+  SluzbyUvodna,
+  ProjetkyUVODNA,
 
 
 

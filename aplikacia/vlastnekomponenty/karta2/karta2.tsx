@@ -47,11 +47,12 @@ const projects = [
 ];
 
 type Props = {
-    pozadiedata:any[]
+  pozadiedata:any[],
+  projektyuvodna:any[]
 }
 
 
-export default function ExclusiveProjects({pozadiedata} : Props) {
+export default function ExclusiveProjects({pozadiedata,projektyuvodna} : Props) {
   const [currentIndex, setCurrentIndex] = useState(1);
 
 
@@ -63,6 +64,7 @@ export default function ExclusiveProjects({pozadiedata} : Props) {
         <ProjectsHeader
         goNext = {() => console.log("okoko")}
         goPrev = {() => console.log("okoko")}
+        projektyuvodna = {projektyuvodna}
         ></ProjectsHeader>
 
         <div className="w-full">

@@ -39,7 +39,7 @@ export default  function Uvod({data,data2,pozadiedata} : Props) {
   return (
     <div className=" w-full h-full ">
 
-<div className="absolute h-[700px] md:h-screen  flex  z-0 inset-x-0 top-0">
+<div className="absolute  h-[700px] md:h-screen  flex  z-0 inset-x-0 top-0">
   <MySwiper
   items = {pozadiedata}
   ></MySwiper>
@@ -55,7 +55,7 @@ export default  function Uvod({data,data2,pozadiedata} : Props) {
   }}
 ></div>
 
-         <div className="w-full h-full  text-white flex items-end  md:items-center lg:items-center  ">
+         <div className="w-full h-full  flex items-end  md:items-center lg:items-center  ">
 
 
         <div className="   gap-15 lg:gap-22 
@@ -75,7 +75,7 @@ export default  function Uvod({data,data2,pozadiedata} : Props) {
             <br />
             váš vysnívaný dom
           </h1> */}
-          <h1 className="max-w-[300px]    text-4xl  md:text-6xl  md:max-w-[800px] lg:text-7xl  tracking-tight">
+          <h1 className="max-w-[300px]    text-4xl  md:text-6xl  text-white md:max-w-[800px] lg:text-7xl  tracking-tight">
            {data[0].UvodnyText}
           </h1>
         </motion.div>
@@ -85,7 +85,7 @@ export default  function Uvod({data,data2,pozadiedata} : Props) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="
-          max-w-[300px]  text-lg  text-center text-foreground/60   md:max-w-xl mx-auto lg:text-xl "
+          max-w-[300px]  text-lg  text-center    text-[var(--bielasvetla)]  md:max-w-xl mx-auto lg:text-xl "
         >
          {data[0].NizzsieText}
         </motion.p>

@@ -78,7 +78,7 @@ onClick={() => {
 {opacity && <motion.div
   initial={{ height: 0 }}
   animate={{ height:  ano ? "fit-content" : "0px" }}
- className={` w-full overflow-hidden grid grid-rows-[auto] gap-1 ${ano ? "pb-3" : "pb-0"}`}
+ className={` w-full overflow-hidden grid  text-[var(--bielasvetla)] grid-rows-[auto] gap-1 ${ano ? "pb-3" : "pb-0"}`}
 >
   {referencia?.map((item) => {
     return(

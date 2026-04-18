@@ -6,16 +6,32 @@ import { client } from "@/lib/sanity";
 import Druhacst from '../vlastnekomponenty/druhacast/druhacast'
 import MalaCast from '../vlastnekomponenty/malacast/malacast'
 import {Otakza} from '../vlastnekomponenty/otazkycast'
+import ZobrazenieSluzieb  from '../vlastnekomponenty/zobrazenieSluzieb';
+
+
+
+import {useApp} from '../app/providers'
 export default async function Page() {
   const data = await client.fetch(`*[_type == "zakladneInformacie"]`);
   const data2 = await client.fetch(`*[_type == "skusenosti"]`);
   const pozadiedata = await client.fetch(`*[_type == "Projekty"]`);
+  const projektyuvodna = await client.fetch(`*[_type == "ProjetkyUVODNA"]`);
+  const SluzbyUvodna = await client.fetch(`*[_type == "SluzbyUvodna"]`);
+   const TypSlubzy = await client.fetch(`*[_type == "sluzba"]`);
+   const Otazky = await client.fetch(`*[_type == "Otazky"]`);
+   const otazkycast = await client.fetch(`*[_type == "otazkycast"]`);
 
 
 
+  console.log();
+  
+
+
+
+  console.log("JInnj rvbonboinbp");
   
   return <>
-  <div className="h-[700px] md:h-screen w-[full] bg-white flex p-4 md:pt-5  md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
+  <div className="h-[700px] md:h-screen w-[full] bg-black flex p-4 md:pt-5  md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
     {/* {data.map(x => x.title)} */}
 
     <Uvod
@@ -29,20 +45,33 @@ export default async function Page() {
     <div  className=" pt-17 h-fit md:h-fit-content w-[full] bg-black flex px-4   md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
  <Druhacst
    pozadiedata = {pozadiedata}
+   projektyuvodna = {projektyuvodna}
  ></Druhacst>
     </div>
 
 
-    <div className="h-[700px] md:h-screen w-[full] bg-white flex p-4 md:pt-5  flex-col md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
-<MalaCast></MalaCast>
-{/* <div className="w-full h-[900px] bg-pink-400"></div> */}
+    <div className="h-fit  bg-black w-[full] flex p-4 md:pt-5  flex-col md:px-[var(--stred)] lg:px-[var(--pcokrej)] pb-12 md:pb-15">
+<MalaCast
+SluzbyUvodna = {SluzbyUvodna}
+></MalaCast>
+<div className="w-full h-fit ">
+
+  <ZobrazenieSluzieb
+  TypSlubzy = {TypSlubzy}
+  ></ZobrazenieSluzieb>
+</div>
 
       
     </div>
-    <div className="h-[700px] md:h-screen w-[full] bg-red-500 flex p-4 md:pt-5 flex-col  md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
-      <MalaCast></MalaCast>
-      <Otakza></Otakza>
-      {/* <div className="w-full h-[900px] bg-pink-400"></div> */}
+    <div className="h-fit md:h-fit w-[full] bg-black flex p-4 md:pt-5 flex-col  md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
+      <MalaCast
+      SluzbyUvodna={Otazky}
+      ></MalaCast>
+      <Otakza
+      otazkycast = {otazkycast}
+      
+      ></Otakza>
+      <div className="w-full h-[900px] bg-pink-400"></div>
     </div>
 
     <div className="h-[700px] md:h-screen w-[full] bg-white flex p-4 md:pt-5  md:px-[var(--stred)] lg:px-[var(--pcokrej)]"></div>

@@ -8,7 +8,7 @@ type Props = {
   zvacseny?: boolean;
   texthore?: string;
   odpoved?: string;
-  podmienka: boolean;
+  podmienka: boolean | null;
   otazka: string;
   odpvene: string;
 };
@@ -30,7 +30,7 @@ const Hybemkomponent = ({
         height: "fit-content",
       }}
       onClick={onClick}
-      className="w-full h-full bg-white pl-6 pr-6 rounded-velky cursor-pointer overflow-hidden"
+      className="w-full h-full rounded-[var(--radius)] bg-pink-300 pl-6 pr-6 rounded-velky cursor-pointer overflow-hidden"
     >
       <motion.div
         initial={{ height: "70px" }}
