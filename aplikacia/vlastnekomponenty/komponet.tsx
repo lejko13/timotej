@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-// import Kruzok from "../kruzok/kruzok";
+
+import Kruzok from './kruzok'
 
 type Props = {
   onClick?: () => void;
@@ -24,17 +25,17 @@ const Hybemkomponent = ({
 }: Props) => {
   return (
     <motion.div
-      initial={{ height: "70px" }}
+      initial={{ height: "66px" }}
       animate={{
-        minHeight: "70px",
+        minHeight: "66px",
         height: "fit-content",
       }}
       onClick={onClick}
-      className="w-full h-full rounded-[var(--radius)] bg-pink-300 pl-6 pr-6 rounded-velky cursor-pointer overflow-hidden"
+      className="w-full h-full border border-[var(--sivaTmava)]  text-white rounded-[var(--radius)] pl-6 pr-6 rounded-velky cursor-pointer overflow-hidden"
     >
       <motion.div
-        initial={{ height: "70px" }}
-        className="w-full h-full flex pt-6 pb-6 items-center"
+        initial={{ height: "66px" }}
+        className="w-full h-full flex pt-5 pb-5items-center"
       >
         <span className="w-full h-fit md:text-[17px]">
           {otazka}
@@ -42,10 +43,10 @@ const Hybemkomponent = ({
 
         <div className="w-fit h-full">
 
-          {/* <Kruzok
+          <Kruzok
             podmienka={podmienka}
-            prisposobujem="w-[20px] h-[20px] bg-blackCustom text-[13px] border-none"
-          /> */}
+            prisposobujem="w-[20px] h-[20px] bg-black text-[13px] border-none"
+          />
         </div>
       </motion.div>
 
@@ -57,7 +58,7 @@ const Hybemkomponent = ({
         transition={{ duration: 0.3 }}
         className="leading-snug overflow-hidden"
       >
-        <span className="text-[13px] pb-4 flex text-sivaTmava md:text-[15px]">
+        <span className="text-[13px] pb-4 flex text-[var(--bielasvetla)] md:text-[15px]">
           {odpvene}
         </span>
       </motion.div>

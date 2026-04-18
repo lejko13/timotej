@@ -1,31 +1,26 @@
-import { Header } from '../header/header'
-import { client } from "@/lib/sanity"
-import { Suspense } from "react"
+import Footer2 from "../footer2";
+import { client } from "@/lib/sanity";
+import { Suspense } from "react";
 
 async function Footer() {
-  const header = await client.fetch(`
-    *[_type == "Header"]{
-      ...,
-      Referecnie[]-> 
-    }
-  `)
+ 
 
   const zakladneInformacie = await client.fetch(
-    `*[_type == "zakladneInformacie"]`
-  )
+    `*[_type == "footer"]`
+  );
 
   return (
-    <Header
-      data={header}
-      data2={zakladneInformacie}
+    <Footer2
+      data={zakladneInformacie}
+   
     />
-  )
+  );
 }
 
-export default function DATAheader() {
+export default function FOOTETIK() {
   return (
-    <Suspense>
-      {/* <HeaderData /> */}
+    <Suspense >
+      <Footer />
     </Suspense>
-  )
+  );
 }

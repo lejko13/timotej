@@ -3,7 +3,7 @@ import { Figtree } from "next/font/google";
 import "./globals.css";
 
 import { AppProvider } from "./providers";
-import Footer from '../vlastnekomponenty/footer/footerzobrazovanie'
+import FOOTETIK from '../vlastnekomponenty/footer/footerzobrazovanie'
 
 
 
@@ -39,7 +39,8 @@ export default   function RootLayout({
           <DATAheader></DATAheader>
       
         {children}
-        <Footer></Footer>
+        <FOOTETIK
+        ></FOOTETIK>
            </AppProvider>
         </body>
 

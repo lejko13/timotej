@@ -14,15 +14,20 @@ const [count, setCount] = useState<number | false>(false);
 
     console.log(otazkycast);
     
-    return <div className="w-full h-fit bg-amber-600 flex flex-col md:p-6 gap-3">
-{/* <div className='w-full bg-pink-900 h-[90px]'></div> */}
-        {/* {otazkycast.map((item,i) => <div className='w-full bg-pink-900 h-[90px]'></div>)} */}
-        {otazkycast.map((item,i) => <Hybemkomponent
+    return <div className="w-full h-fit0 flex flex-col  gap-8 md:flex-row">
+<div className=' h-[90px] w-[40vw] hidden md:flex'></div>
+       
+
+        <div className='w-full flex flex-col gap-3'>
+            {otazkycast.map((item,i) => <Hybemkomponent
         onClick = {() => setCount(prev => prev === i ? false : i)}
         podmienka = {count === i}
-        otazka = "kokokokok"
-        odpvene = "llplplp"
+        otazka = {item.otazka}
+        odpvene = {item.odpoved}
         ></Hybemkomponent>)}
+
+        </div>
+        
 
 
 

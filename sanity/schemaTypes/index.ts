@@ -16,6 +16,7 @@ import ProjetkyUVODNA from './projektymaintext/projektymaintext'
 import SluzbyUvodna from './sluzbaUvod/sluzbaUvod'
 import Otazky from './otazky'
 import otazkycast from './otazkovacast'
+import footer from './footer/footer'
 
 
 export const schemaTypes = [
@@ -24,6 +25,7 @@ export const schemaTypes = [
   person,
   screening,
   header,
+  footer,
   Otazky,
 otazkycast,
   zakladneinformacie,

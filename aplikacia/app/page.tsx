@@ -63,7 +63,7 @@ SluzbyUvodna = {SluzbyUvodna}
 
       
     </div>
-    <div className="h-fit md:h-fit w-[full] bg-black flex p-4 md:pt-5 flex-col  md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
+    <div className="h-fit md:h-fit w-[full] bg-black flex p-4 md:pt-5 flex-col pb-22 md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
       <MalaCast
       SluzbyUvodna={Otazky}
       ></MalaCast>
@@ -71,18 +71,14 @@ SluzbyUvodna = {SluzbyUvodna}
       otazkycast = {otazkycast}
       
       ></Otakza>
-      <div className="w-full h-[900px] bg-pink-400"></div>
+    
     </div>
 
-    <div className="h-[700px] md:h-screen w-[full] bg-white flex p-4 md:pt-5  md:px-[var(--stred)] lg:px-[var(--pcokrej)]"></div>
+  
 
 
 
-     {/* <Link href="/kontakt">
-  <button className="p-2 bg-blue-500 text-white">
-    Kontakt
-  </button>
-</Link> */}
+   
 </>
   
     ;

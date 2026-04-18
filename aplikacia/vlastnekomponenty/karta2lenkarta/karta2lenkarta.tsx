@@ -34,7 +34,7 @@ export default function ProjectCardCenter({ project }: Props) {
         
             <span
         
-              className="text-xs text-[var(--sivaSvetlsie)] border border-neutral-800 rounded-full px-3 py-1 font-light"
+              className="text-xs text-[var(--sivaSvetlsie)] border border-[var(--sivaTmava)] rounded-full px-3 py-1 font-light"
             >
               {project.tags}
             </span>

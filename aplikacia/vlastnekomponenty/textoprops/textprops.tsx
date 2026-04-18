@@ -23,11 +23,11 @@ export default function ProjectsHeader({SluzbyUvodna} : Props ) {
      <div className=" pt-1 gap-2  md:gap-8  flex flex-col  items-center  md:flex-row  mb-3 md:mb-20 pb-2 md:pb-0 ">
 
         <div className="pt-1  w-[40vw] flex justify-center md:justify-start ">
-              <div className="flex items-center gap-2.5  w-fit ">
+              <div className="flex items-center gap-2.5  w-fit   w-[200px]">
 <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-[pulse_2s_ease-in-out_infinite] inline-block" />
 
 
-        <span className="cursor-pointer text-[var(--bielasvetla)]  text-sm tracking-widest uppercase font-light">
+        <span className="cursor-pointer text-[var(--bielasvetla)]  whitespace-nowrap text-sm tracking-widest uppercase font-light">
           {SluzbyUvodna[0].BtnPocitactext}
         </span>
       </div>
