@@ -37,7 +37,7 @@ export default  function Uvod({data,data2,pozadiedata} : Props) {
     
     
   return (
-    <div className=" w-full h-full ">
+    <div className=" w-full h-full overflow-hidden ">
 
 <div className="absolute  h-[700px] md:h-screen  flex  z-0 inset-x-0 top-0">
   <MySwiper
@@ -55,15 +55,15 @@ export default  function Uvod({data,data2,pozadiedata} : Props) {
   }}
 ></div>
 
-         <div className="w-full h-full  flex items-end  md:items-center lg:items-center  ">
+         <div className="w-full h-full    flex items-end  md:items-center lg:items-center  ">
 
 
         <div className="   gap-15 lg:gap-22 
   
-        h-full  relative  flex flex-col justify-end lg:justify-center  mx-auto px-3 md:px-0 w-full lg:gap-14">
+        h-full  relative  flex flex-col  justify-end lg:justify-center  mx-auto px-3 md:px-0 w-full lg:gap-14">
         {/* Heading */}
 
-        <div className="flex flex-col  gap-6  lg:pt-[110px]">
+        <div className="flex flex-col  gap-6  lg:pt-[110px] ">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}

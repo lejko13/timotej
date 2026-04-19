@@ -8,6 +8,13 @@ export default defineType({
     type:"string",
     name:"Nazov"
   },
+   {
+      name: "link",
+      title: "odkaz",
+      type: "string"
+    },
+
+
   {
       name:"Referecnie",
     type:"array",

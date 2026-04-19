@@ -16,6 +16,11 @@ export default defineType({
     {
       type: "image",
       name: "Obrazok"
+    },
+     {
+      name: "link",
+      title: "Odkaz",
+      type: "string"
     }
   ]
 });

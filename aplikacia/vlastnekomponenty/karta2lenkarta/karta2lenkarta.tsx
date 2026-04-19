@@ -1,8 +1,12 @@
+
+import Link from 'next/link'
+
 type Project = {
   image: string;
   title: string;
   year: number;
   tags: string;
+  slug: string;
 };
 
 type Props = {
@@ -11,6 +15,8 @@ type Props = {
 
 export default function ProjectCardCenter({ project }: Props) {
   return (
+<Link href={`/detail`}>
+
     <div className="rounded-[var(--radius)] border border-[var(--sivaTmava)] bg-[var(--cierna)] p-3 md:p-4">
       <div className="relative overflow-hidden rounded-[var(--radiusInsie)] aspect-[4/3] ">
         <img
@@ -42,5 +48,6 @@ export default function ProjectCardCenter({ project }: Props) {
         </div>
       </div>
     </div>
+    </Link>
   );
 }

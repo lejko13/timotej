@@ -17,6 +17,7 @@ import SluzbyUvodna from './sluzbaUvod/sluzbaUvod'
 import Otazky from './otazky'
 import otazkycast from './otazkovacast'
 import footer from './footer/footer'
+import projektytext from './projektytext'
 
 
 export const schemaTypes = [
@@ -28,6 +29,7 @@ export const schemaTypes = [
   footer,
   Otazky,
 otazkycast,
+projektytext,
   zakladneinformacie,
  
   typSluzby,

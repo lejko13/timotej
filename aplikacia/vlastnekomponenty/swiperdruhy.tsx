@@ -8,6 +8,9 @@ import { Mousewheel } from "swiper/modules";
 import { urlFor } from '../lib/ sanityImage'
 import { useApp } from "@/app/providers";
 
+
+
+
 import ProjectCardCenter from '../vlastnekomponenty/karta2lenkarta/karta2lenkarta'
 type Props = {
   pozadiedata: any[];
@@ -70,15 +73,20 @@ centeredSlides={true}
               : "scale-85 opacity-60"
           }`}
         >
-            <ProjectCardCenter
+          
+         <ProjectCardCenter
             project={{
                 image: urlFor(item.Fotka).url(),
                 title: item.NazovProjektu,
                 year: item.Rok,
-                tags:item.Typ
+                tags:item.Typ,
+                    slug: item.slug.current
             }}
           
             ></ProjectCardCenter>
+        
+        
+           
 
           {/* <img
             src={urlFor(item.Fotka).url()}

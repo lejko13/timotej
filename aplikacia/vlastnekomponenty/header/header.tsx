@@ -1,7 +1,7 @@
 "use client"
 import Buttonheader from '../btn'
 import { useState ,useRef, useEffect} from 'react';
-
+import Link from 'next/link'
 import { motion, AnimatePresence } from "framer-motion";
 import {BtnOtvarac} from '../btnotovrenei'
 
@@ -18,7 +18,8 @@ type Sluzba = {
   _id: string;
   Popis:string
   Nazov: string;
- Obrazok: SanityImage
+ Obrazok: SanityImage,
+
 };
 
 type HeaderItem = {
@@ -26,6 +27,7 @@ type HeaderItem = {
   Referecnie?: Sluzba[];
   _id:string
   isActive:boolean
+   link:string
 
 
 };
@@ -42,13 +44,16 @@ type Props = {
 
 
 
+
+
 export function Header({ data ,data2}: Props) {
 
   //  const isMobile = useMediaQuery({ mWidth: 768 });
 
 // console.log(data2[0].LogoNazovWebu);
 
-//   console.log(data);
+  console.log(data);
+  console.log(data2);
   
 
   const [otvaram,setOtvram] = useState(false)
@@ -157,10 +162,11 @@ useEffect(() => {
 <div className='w-fit h-full flex items-center justify-center font-medium text-[17px]'>{data2[0].LogoNazovWebu}</div>
 
 <div 
-// ref={sirka}
+
 className='w-fit h-full flex gap-4 items-center ' >
   {data.map((item,i) => 
-  <div 
+  
+  <div  key={i}
     ref={(el) => {
       if (item.isActive) {
         refs.current[i] = el;
@@ -174,6 +180,7 @@ className='w-fit h-full flex gap-4 items-center ' >
   <BtnKlasika
  text={item.Nazov}
  rednder = {item.isActive}
+ sluzba = {item.link}
   ></BtnKlasika>
   </div>
   )}
@@ -185,7 +192,7 @@ className='w-fit h-full flex gap-4 items-center ' >
 {/* <div className='w-[400px] bg-amber-200 h-full'></div> */}
 
 </div>
-
+{/* tu su sluzby */}
         <motion.div 
         ref={referencia3}
         initial ={{ height: 0 }}

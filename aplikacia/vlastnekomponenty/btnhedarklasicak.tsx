@@ -3,13 +3,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useApp } from "@/app/providers";
 
 import { useState ,useRef, useEffect} from 'react';
-
+import Link from 'next/link'
 type Props = {
   text: string
   rednder:boolean
+  sluzba:string
 }
 
-export function BtnKlasika({text,rednder} : Props) {
+export function BtnKlasika({text,rednder,sluzba} : Props) {
 
 
 
@@ -34,24 +35,26 @@ export function BtnKlasika({text,rednder} : Props) {
   
 
 
-  return (
-    <button className=" h-full text-white flex justify-between flex-col  rounded-md  transition">
- 
-<div className="flex h-full  text-[16px] items-center   gap-1 justify-center ">
-  <span className="whitespace-nowrap ">{text}</span>
-{rednder &&  
-<motion.div
-className=" text-[10px]  "
-          animate={{ rotate: otovrenie ? 180 : 0 }}
+ return rednder ? (
+  <div className="h-full text-white flex justify-between flex-col rounded-md transition cursor-default">
+    <div className="flex h-full text-[16px] items-center gap-1 justify-center">
+      <span className="whitespace-nowrap">{text}</span>
+
+      <motion.div
+        className="text-[10px]"
+        animate={{ rotate: otovrenie ? 180 : 0 }}
         transition={{ duration: 0.3 }}
-       
-        ><ChevronDown size={20}/>
-        </motion.div>
-}
- 
-{/* <div className="hidden  lg:block fixed top-0 left-0 w-full h-9 bg-amber-500"></div> */}
-</div>
-    </button>
-  );
+      >
+        <ChevronDown size={20} />
+      </motion.div>
+    </div>
+  </div>
+) : (
+  <Link href={sluzba} className="h-full text-white flex justify-between flex-col rounded-md transition">
+    <div className="flex h-full text-[16px] items-center gap-1 justify-center">
+      <span className="whitespace-nowrap">{text}</span>
+    </div>
+  </Link>
+);
 }
 

@@ -9,5 +9,23 @@ export default defineType({
     name: "fotka",
   title: "Fotka",
   type: "image"
-   }
+   },
+   {
+    type:"string",
+    name:"BtnPocitactext"
+  },
+  {
+    type:"string",
+    name:"BtnMobiltext"
+  },
+  {
+    type:"string",
+    name:"Hlavnytext"
+  },
+  {
+    type:"string",
+    name:"Malytext"
+  },
+
+
   ]})

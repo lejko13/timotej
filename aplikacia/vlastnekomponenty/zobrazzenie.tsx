@@ -116,15 +116,12 @@ export default function FooterMain() {
       {/* Big brand text */}
       <div className="px-6 md:px-12 lg:px-20 pb-10 pt-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
+          <div
+            
             className="text-5xl sm:text-7xl md:text-8xl lg:text-[8rem] font-display font-bold text-white leading-[0.9] tracking-tight"
           >
       Timothy Smon
-          </motion.div>
+          </div>
         </div>
       </div>
     </footer>
