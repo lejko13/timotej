@@ -159,7 +159,10 @@ useEffect(() => {
 <div className='h-[50px] flex  justify-between '>
 
 {/* <div className='w-fit bg-amber-200 h-full flex items-center justify-center'>{data2[0].LogoNazovWebu}</div> */}
-<div className='w-fit h-full flex items-center justify-center font-medium text-[17px]'>{data2[0].LogoNazovWebu}</div>
+<Link 
+  href="/"
+ onClick={() => window.scrollTo({ top: 0 })}
+className='w-fit h-full flex items-center justify-center font-medium text-[17px]'>{data2[0].LogoNazovWebu}</Link>
 
 <div 
 
@@ -202,8 +205,8 @@ className='w-fit h-full flex gap-4 items-center ' >
           paddingBottom: otovrenie ? "15px" : "0px",
          }}
         className='w-full  overflow-hidden flex gap-6'>
-       {informacia?.map((polozka) => {
-  return   <KartaTyp
+       {informacia?.map((polozka,i) => {
+  return   <KartaTyp key={i}
   NazovOdboru = {polozka.Nazov}
   fotka = {polozka.Obrazok}
   onMouseLeave={() => setPriblizujem("")}
@@ -267,29 +270,24 @@ rounded-[var(--radius)]
         ref={referencia2}
         className='w-full h-fit  flex flex-col lg:hidden '>
 
-          {data.map((item) =>
-          
-          
-<>
-<BtnOtvarac
+    
+{data.map((item) => (
+  <div key={item._id}>
+    <BtnOtvarac
+      opacity={item.isActive}
+      onClick={() => {
+        setOpen(prev => !prev);
+        setSkusam(prev => prev === item._id ? "" : item._id);
+      }}
+      text={item.Nazov}
+      ano={skusam === item._id}
+      referencia={item.Referecnie}
+      otvaram={otvaram}
+    />
 
-         
-
-           opacity = {item.isActive}
-           
-           onClick={() => {setOpen(prev => !prev),console.log(open),setSkusam(prev => prev === item._id ? "" : item._id)}}
-          text={item.Nazov}
-
-            ano={ skusam === item._id}
-
-          referencia = {item.Referecnie}
-otvaram = {otvaram}
-          ></BtnOtvarac>
-
-   <div className="w-full h-[1px] bg-[var(--sivaSvetlsie)]"></div>
-</>
-           
-          )}
+    <div className="w-full h-[1px] bg-[var(--sivaSvetlsie)]" />
+  </div>
+))}
 
 
        

@@ -23,15 +23,15 @@ export default async function Page() {
 
 
 
-  console.log();
+
   
 
 
 
-  console.log("JInnj rvbonboinbp");
+  
   
   return <>
-  <div className="h-[700px]  overflow-hidden md:h-screen w-[full] bg-black flex p-4 md:pt-5  md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
+  <div className="h-[700px]   md:h-screen w-[full] bg-black flex p-4 md:pt-5  md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
     
 
     <Uvod

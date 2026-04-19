@@ -80,9 +80,9 @@ onClick={() => {
   animate={{ height:  ano ? "fit-content" : "0px" }}
  className={` w-full overflow-hidden grid  text-[var(--bielasvetla)] grid-rows-[auto] gap-1 ${ano ? "pb-3" : "pb-0"}`}
 >
-  {referencia?.map((item) => {
+  {referencia?.map((item,i) => {
     return(
-<div className='h-8 flex items-center pl-3'>{item.Nazov}</div>
+<div key = {i} className='h-8 flex items-center pl-3'>{item.Nazov}</div>
     )
 
   })}

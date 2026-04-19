@@ -35,7 +35,7 @@ export const KartaTyp  = ({NazovOdboru,fotka,onMouseEnter,onMouseLeave,priblizuj
     cursor-pointer
 
     relative inset-0 w-full h-full object-cover transition-transform duration-300 ${
-    priblizujem ? "scale-103" : "scale-100"
+    priblizujem ? "scale-105" : "scale-100"
   }`}
     alt=""
   />

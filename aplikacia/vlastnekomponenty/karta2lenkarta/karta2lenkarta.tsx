@@ -13,16 +13,21 @@ type Props = {
   project: Project;
 };
 
-export default function ProjectCardCenter({ project }: Props) {
-  return (
-<Link href={`/detail`}>
 
-    <div className="rounded-[var(--radius)] border border-[var(--sivaTmava)] bg-[var(--cierna)] p-3 md:p-4">
+export default function ProjectCardCenter({ project }: Props) {
+
+  console.log(project.slug);
+  
+  return (
+
+<Link href={`/detail/${project.slug}`}>
+
+    <div className=" group  rounded-[var(--radius)] border border-[var(--sivaTmava)] bg-[var(--cierna)] p-3 md:p-4">
       <div className="relative overflow-hidden rounded-[var(--radiusInsie)] aspect-[4/3] ">
         <img
           src= {project.image}
           alt={project.title}
-          className="w-full h-full object-cover"
+         className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
         />
       </div>
 

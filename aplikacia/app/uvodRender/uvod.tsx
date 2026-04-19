@@ -10,7 +10,9 @@ import Tusucisla from '../../vlastnekomponenty/pocitanie'
 import { SanityImage } from '../../lib/types/sanity'
 import MySwiper from '../../vlastnekomponenty/posunobrazok'
 
+ 
 
+  
 type Ukazka = {
   cislo: number;
   popis: string;
@@ -33,7 +35,7 @@ export default  function Uvod({data,data2,pozadiedata} : Props) {
     // console.log(data[0]);
     // console.log(data[0].cislo);
 
-    console.log(pozadiedata);
+  
     
     
   return (

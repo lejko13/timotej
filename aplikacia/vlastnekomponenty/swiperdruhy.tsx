@@ -18,7 +18,9 @@ type Props = {
 
 export default function MySwiper({ pozadiedata }: Props) {
 
-console.log(urlFor(pozadiedata[0].Fotka).url());
+console.log(pozadiedata[0].slug);
+console.log(pozadiedata[0].slug.current);
+
 
 const { swiperRef } = useApp();
 
