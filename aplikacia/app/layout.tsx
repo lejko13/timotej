@@ -37,7 +37,7 @@ export default   function RootLayout({
       lang="en"
       className={`${figtree.variable}  h-full antialiased`}
     >
-    <ScrollToTop />
+<ScrollToTop></ScrollToTop>
       <body className="min-h-full flex flex-col font-[var(--font-figtree)]">
          
          <AppProvider>

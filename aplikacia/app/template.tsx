@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
-import React, { useEffect } from "react";
+import React, { useLayoutEffect } from "react";
 
 export default function Template({
   children,
@@ -11,11 +11,9 @@ export default function Template({
 }) {
   const pathname = usePathname();
 
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+  // 🔥 dôležité: useLayoutEffect + bez smooth
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
   }, [pathname]);
 
   return (
@@ -26,7 +24,7 @@ export default function Template({
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.3 }}
-        className="flex flex-col overflow-hidden"
+        className="flex flex-col"
       >
         {children}
       </motion.div>

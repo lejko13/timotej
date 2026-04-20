@@ -160,7 +160,7 @@ useEffect(() => {
 
 {/* <div className='w-fit bg-amber-200 h-full flex items-center justify-center'>{data2[0].LogoNazovWebu}</div> */}
 <Link 
-  href="/"
+  href="/domov"
  onClick={() => window.scrollTo({ top: 0 })}
 className='w-fit h-full flex items-center justify-center font-medium text-[17px]'>{data2[0].LogoNazovWebu}</Link>
 

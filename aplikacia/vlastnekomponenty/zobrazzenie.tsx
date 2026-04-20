@@ -2,14 +2,14 @@
 import { motion } from "framer-motion";
 
 const navLinks = [
-  { label: "Domov", href: "/" },
-  { label: "Rodinný dom na mieru", href: "/", underline: true },
-  { label: "Katalógové projekty", href: "/" },
-  { label: "Interiérový dizajn", href: "/" },
-  { label: "Výstavba", href: "/" },
-  { label: "Pre firmy", href: "/" },
-  { label: "O nás", href: "/" },
-  { label: "Kontakt", href: "/" },
+  { label: "Domov"},
+  { label: "Rodinný dom na mieru"},
+  { label: "Katalógové projekty", },
+  { label: "Interiérový dizajn",  },
+  { label: "Výstavba",  },
+  { label: "Pre firmy", },
+  { label: "O nás",  },
+  { label: "Kontakt",  },
 ];
 
 export default function FooterMain() {
@@ -26,9 +26,7 @@ export default function FooterMain() {
                   <li key={link.label}>
                     <div
               
-                      className={`text-xl md:text-2xl font-body font-medium text-white/90 hover:text-white transition-colors ${
-                        link.underline ? "underline underline-offset-4" : ""
-                      }`}
+                      className={`text-xl md:text-2xl font-body font-medium text-white/90 hover:text-white transition-colors `}
                     >
                       {link.label}
                     </div>

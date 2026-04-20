@@ -69,7 +69,7 @@ centeredSlides={true}
     <SwiperSlide key={i} className=" flex justify-center">
       {({ isActive }) => (
         <div
-          className={`w-full   overflow-hidden transition-all duration-500 ${
+          className={`w-full    transition-all duration-500 ${
             isActive
               ? "scale-100 opacity-100 z-10"
               : "scale-85 opacity-60"
