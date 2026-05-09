@@ -37,16 +37,19 @@ export default   function RootLayout({
       lang="en"
       className={`${figtree.variable}  h-full antialiased`}
     >
-<ScrollToTop></ScrollToTop>
+
       <body className="min-h-full flex flex-col font-[var(--font-figtree)]">
-         
+         <ScrollToTop></ScrollToTop>
          <AppProvider>
           <DATAheader></DATAheader>
       
         {children}
         <FOOTETIK
         ></FOOTETIK>
+        {/* <div className="w-full h-[900px] bg-amber-500"></div> */}
            </AppProvider>
+
+           
         
         </body>
 

@@ -18,6 +18,7 @@ import Otazky from './otazky'
 import otazkycast from './otazkovacast'
 import footer from './footer/footer'
 import projektytext from './projektytext'
+import Swipercast from './swipercastvvrch'
 
 
 export const schemaTypes = [

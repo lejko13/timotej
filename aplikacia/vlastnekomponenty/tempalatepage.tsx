@@ -26,7 +26,7 @@ export default function Template({ children,text,}: Props) {
     <div className="h-[700px] relative overflow-hidden md:h-screen w-[full] bg-pink-500 flex p-4 md:pt-5  md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
 
       <img
-src={urlFor(text[0].Fotka).url()}
+src={text?.[0]?.Fotka ? urlFor(text[0].Fotka).url() : ""}
   alt=""
   className="absolute inset-0 w-full h-full object-cover"
 />

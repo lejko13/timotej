@@ -14,6 +14,8 @@ import { useMediaQuery } from "react-responsive";
 import {KartaTyp} from '../kartatyp'
 
 
+
+
 type Sluzba = {
   _id: string;
   Popis:string
@@ -37,7 +39,6 @@ type Props = {
   data2:any[]
 };
 
-// const [openIndex, setOpenIndex] = useState<number | null>(null);
 
 
 
@@ -99,21 +100,21 @@ useEffect(() => {
 
 
 
-useEffect(() => {
-  if (otvaram) {
-      document.documentElement.style.overflow = "hidden";
-  document.body.style.overflow = "hidden";
+// useEffect(() => {
+//   if (otvaram) {
+//       document.documentElement.style.overflow = "hidden";
+//   document.body.style.overflow = "hidden";
 
     
-  }
-  if (!otvaram) {
-    document.documentElement.style.overflow = "auto";
-    document.body.style.overflow = "auto";
+//   }
+//   if (!otvaram) {
+//     document.documentElement.style.overflow = "auto";
+//     document.body.style.overflow = "auto";
     
-  }
+//   }
 
 
-},[otvaram])
+// },[otvaram])
 
 
 
@@ -155,7 +156,10 @@ useEffect(() => {
      text-white 
      rounded-[var(--radius)]
      bg-black/10
-     z-50 hidden top-5 left-[var(--pcokrej)] right-[var(--pcokrej)] lg:block   backdrop-blur-xl px-4 py-2  flex items-center  flex-col  fixed   ">
+    
+    z-50 hidden top-5 left-[var(--pcokrej)] right-[var(--pcokrej)] lg:block   backdrop-blur-xl px-4 py-2  flex items-center  flex-col  fixed   ">
+
+
 <div className='h-[50px] flex  justify-between '>
 
 {/* <div className='w-fit bg-amber-200 h-full flex items-center justify-center'>{data2[0].LogoNazovWebu}</div> */}
@@ -192,9 +196,10 @@ className='w-fit h-full flex gap-4 items-center ' >
   
 </div>
 
-{/* <div className='w-[400px] bg-amber-200 h-full'></div> */}
 
 </div>
+
+
 {/* tu su sluzby */}
         <motion.div 
         ref={referencia3}
@@ -225,6 +230,19 @@ className='w-fit h-full flex gap-4 items-center ' >
 
     {/* pc */}
 {/* md:px-[var(--pcokrej)] */}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  {/* mobil */}

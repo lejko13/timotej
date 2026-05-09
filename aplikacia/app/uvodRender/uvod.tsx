@@ -39,7 +39,7 @@ export default  function Uvod({data,data2,pozadiedata} : Props) {
     
     
   return (
-    <div className=" w-full h-full overflow-hidden ">
+    <div className=" w-full h-full  ">
 
 <div className="absolute  h-[700px] md:h-screen  flex  z-0 inset-x-0 top-0">
   <MySwiper

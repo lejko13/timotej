@@ -63,15 +63,19 @@
 
 }
 body {
-  scroll-behavior: smooth;
+
   background-color: black;
 }
 
 html {
 background-color: black;
-  scroll-behavior: smooth;
+
 
 }
+
+/* * {
+  outline: 1px solid red;
+} */
 
 
 @layer base {

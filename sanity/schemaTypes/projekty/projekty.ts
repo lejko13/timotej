@@ -13,13 +13,81 @@ export default defineType({
       name: "NazovProjektu",
       type: "string",
     },
+  
+
     {
-      name: "Popis",
+      name:"NadpisUvod",
       type: "string",
     },
     {
+      name:"PopsiDlhy",
+      type: "string",
+    },
+
+      {
+      name: "PopisKratkyUvod",
+      type: "string",
+    },
+
+    
+
+     {
+      name: "InterierInfo",
+      title: "Interiér info",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "Nazov",
+              type: "string",
+            },
+            {
+              name: "Hodnota",
+              type: "string",
+            },
+            {
+              name: "Ikona",
+              type: "string",
+            },
+            
+          ],
+        },
+      ],
+    },
+
+     {
+      name: "Galeria",
+      title: "Galéria",
+      type: "array",
+      of: [
+        {
+          type: "image",
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            {
+              name: "alt",
+              type: "string",
+              title: "Alt text",
+            },
+          ],
+        },
+      ],
+    },
+
+    
+
+    {
       name: "Rok",
       type: "number",
+    },
+    {
+      name: "Style",
+      type: "string",
+
     },
     {
       name: "Typ",

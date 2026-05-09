@@ -26,7 +26,8 @@ export default function ZobrazenieSluzieb({TypSlubzy} : Props) {
   return (
     <div className=" text-white rounded-xl h-fit w-full flex flex-col gap-2.5">
 {TypSlubzy.map((item, index) => (
-  <>
+
+
 
   <ServicesSection
     key={index}
@@ -36,7 +37,7 @@ export default function ZobrazenieSluzieb({TypSlubzy} : Props) {
     fotka={item.Obrazok}
   />
 
-    </>
+  
 ))}
  {/* <div className='w-full h-[20px] bg-amber-500'></div> */}
     </div>

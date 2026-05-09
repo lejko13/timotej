@@ -20,6 +20,7 @@ const [count, setCount] = useState<number | false>(false);
 
         <div className='w-full flex flex-col gap-3'>
             {otazkycast.map((item,i) => <Hybemkomponent
+            key={i}
         onClick = {() => setCount(prev => prev === i ? false : i)}
         podmienka = {count === i}
         otazka = {item.otazka}

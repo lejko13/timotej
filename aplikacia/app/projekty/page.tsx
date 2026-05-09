@@ -7,7 +7,7 @@ import { client } from "@/lib/sanity";
 
 export default async function Page() {
 
-  // simulácia oneskorenia 5 sekúnd
+
 
 
   const projektytext = await client.fetch(`*[_type == "projektytext"]`);

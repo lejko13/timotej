@@ -22,7 +22,7 @@ export default function Footer2({ data }: Props) {
 
   return (
     <>
-      <div className="w-full h-[700px]    bg-pink-300 relative p-4 md:pt-5 flex-col pb-22 md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
+      <div className="w-full min-h-[700px]    bg-pink-300 relative p-4 md:pt-5 flex-col pb-22 md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
 
         <img
           src={urlFor(data[0].fotka).url()}

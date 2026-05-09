@@ -26,9 +26,9 @@ console.log(data);
   return <div className="w-[full] h-fit p-4 pt-19 md:pt-5  md:px-[var(--stred)] lg:px-[var(--pcokrej)]">
 <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-auto gap-6 ">
 
-{data.map((item) => (
+{data.map((item,i) => (
   <ProjectCardCenter
-    key={item.IDENTIFIKATOR}
+    key={i}
     project={{
  image: urlFor(item.Fotka).url(),
       title: item.NazovProjektu,

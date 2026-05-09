@@ -17,21 +17,21 @@ export function BtnKlasika({text,rednder,sluzba} : Props) {
   const { open, setOpen ,okno, setOkno,otovrenie, setOtvorenie} = useApp();
   
 
-  useEffect(() => {
-    if (otovrenie) {
-        document.documentElement.style.overflow = "hidden";
-    document.body.style.overflow = "hidden";
+  // useEffect(() => {
+  //   if (otovrenie) {
+  //       document.documentElement.style.overflow = "hidden";
+  //   document.body.style.overflow = "hidden";
   
       
-    }
-    if (!otovrenie) {
-      document.documentElement.style.overflow = "auto";
-      document.body.style.overflow = "auto";
+  //   }
+  //   if (!otovrenie) {
+  //     document.documentElement.style.overflow = "auto";
+  //     document.body.style.overflow = "auto";
       
-    }
+  //   }
   
   
-  },[otovrenie])
+  // },[otovrenie])
   
 
 
